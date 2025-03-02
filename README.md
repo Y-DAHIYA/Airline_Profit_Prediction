@@ -117,9 +117,5 @@ These insights help in identifying patterns, optimizing airline operations, and 
 
 ---
 
-## ✨ Contributors
-
-- **Your Name** *(Data Analyst & Developer)*
-
 📌 Feel free to contribute or raise issues! 🚀
 
