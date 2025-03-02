@@ -1,5 +1,4 @@
 # Airline_Profit_Prediction
-# Profit Prediction Model
 
 ## 📌 Project Overview
 
