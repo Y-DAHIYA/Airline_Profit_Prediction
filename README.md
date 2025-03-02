@@ -101,7 +101,7 @@ These insights help in identifying patterns, optimizing airline operations, and 
 ## 📈 Results & Insights
 
 - The model successfully predicts airline profits based on financial and operational metrics.
-- **LightGBM performed best** with the highest accuracy.
+- **MLPRegressor, HistGradientBoosting & LightGBM performed best** with the highest accuracy.
 - **Feature engineering and scaling played a crucial role** in improving model performance.
 - The **Streamlit interface** makes it easy to input values and get predictions in real-time.
 
@@ -110,9 +110,8 @@ These insights help in identifying patterns, optimizing airline operations, and 
 ## 🛠 Future Improvements
 
 ✅ Add more models and compare results.\
-✅ Deploy the app using **Streamlit Cloud** or **Heroku**.\
+✅ Deploy the app using **Streamlit Cloud** .\
 ✅ Enhance UI with interactive visualizations.\
-✅ Automate feature selection using **SHAP** or **Feature Importance**.
 
 ---
 
