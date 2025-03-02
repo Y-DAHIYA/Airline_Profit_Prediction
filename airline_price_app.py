@@ -12,8 +12,8 @@ st.sidebar.header("📂 Model Loading...")
 
 try:
     mlp_pipeline = joblib.load("MLPRegressor_pipeline.pkl")  # MLP with Scaler
-    extra_trees_model = joblib.load("ExtraTreesRegressor_pipeline.pkl")  # Standalone Model
-    random_forest_model = joblib.load("RandomForestRegressor_pipeline.pkl")  # Standalone Model
+    HistGradientBoosting_pipeline_model = joblib.load("HistGradientBoosting_pipeline.pkl")  # Standalone Model
+    LGBM_pipeline_model = joblib.load("LGBM_pipeline.pkl")  # Standalone Model
     st.sidebar.success("✅ Models Loaded Successfully!")
 except FileNotFoundError:
     st.sidebar.error("❌ Model files not found! Ensure they are in the directory.")
@@ -92,8 +92,8 @@ if st.button("🔍 Predict Profit"):
 
     # Make Predictions
     pred_mlp = mlp_pipeline.predict(input_data)[0] if mlp_pipeline is not None else None
-    pred_extra = extra_trees_model.predict(input_data)[0] if extra_trees_model is not None else None
-    pred_rf = random_forest_model.predict(input_data)[0] if random_forest_model is not None else None
+    pred_hist = HistGradientBoosting_pipeline_model.predict(input_data)[0] if HistGradientBoosting_pipeline_model is not None else None
+    pred_lgbm = LGBM_pipeline_model.predict(input_data)[0] if LGBM_pipeline_model is not None else None
 
     # Display Predictions
     if pred_mlp is not None:
@@ -101,14 +101,14 @@ if st.button("🔍 Predict Profit"):
     else:
         st.write("⚠️ **MLP Regressor Model Not Loaded!**")
 
-    if pred_extra is not None:
-        st.write("💵 **Extra Trees Regressor Predicted Profit (USD):**", round(pred_extra, 2))
+    if pred_hist is not None:
+        st.write("💵 **HistGradient Boosting Predicted Profit (USD):**", round(pred_hist, 2))
     else:
-        st.write("⚠️ **Extra Trees Regressor Model Not Loaded!**")
+        st.write("⚠️ **HistGradient Boosting Model Not Loaded!**")
 
-    if pred_rf is not None:
-        st.write("💵 **Random Forest Regressor Predicted Profit (USD):**", round(pred_rf, 2))
+    if pred_lgbm is not None:
+        st.write("💵 **LGBM Predicted Profit (USD):**", round(pred_lgbm, 2))
     else:
-        st.write("⚠️ **Random Forest Regressor Model Not Loaded!**")
+        st.write("⚠️ **LGBM Model Not Loaded!**")
 
 st.write("🚀 Ready to Predict! Enter values and click **Predict Profit**.")
