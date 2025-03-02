@@ -95,6 +95,10 @@ These insights help in identifying patterns, optimizing airline operations, and 
 
 ---
 
+![Image](https://github.com/user-attachments/assets/25729543-cc58-4763-b892-24918c6bb18d)
+
+---
+
 ## 📈 Results & Insights
 
 - The model successfully predicts airline profits based on financial and operational metrics.
