@@ -46,8 +46,9 @@ This project builds a **profit prediction model** using **machine learning** tec
 ---
 
 ## 🚀 Running the Project
----
+
 ![Image](https://github.com/user-attachments/assets/096df987-8c4e-4275-a4a7-7338814fb232)
+
 ---
 ### 1️⃣ Install Dependencies
 
